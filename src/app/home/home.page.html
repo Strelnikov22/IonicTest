@@ -1,20 +1,43 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+    <ion-title>My Library </ion-title>
+    <ion-button slot="end" (click)="addNewPlace()">add book</ion-button>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-title size="large">My Library</ion-title>
     </ion-toolbar>
   </ion-header>
 
   <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+
+    <ion-list>
+      <ion-item>
+        <ion-item>ISBN</ion-item>
+        <ion-item>Book</ion-item>
+        <ion-item>Author</ion-item>
+        <ion-item>Publisher</ion-item>
+        <ion-item>Year</ion-item>
+      </ion-item>
+    </ion-list>
+
+    <ion-list>
+      <ion-item *ngFor="let place of places; let i = 'place.id' ">
+        <ion-item>{{place.ISBN}}</ion-item>
+        <ion-item>{{place.Book}}</ion-item>
+        <ion-item>{{place.Author}}</ion-item>
+        <ion-item>{{place.Publisher}}</ion-item>
+        <ion-item>{{place.Year}}</ion-item>
+        <ion-item slot="end">
+          <ion-button id="#btn-cancel" (click)="onDeletePlace(i)">dell book {{place.id}}</ion-button>
+        </ion-item>
+      </ion-item>
+    </ion-list>
+
+   
+
   </div>
 </ion-content>

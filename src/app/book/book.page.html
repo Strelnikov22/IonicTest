@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>New book</ion-title>
+    <ion-button slot="end" class="saveBook" id="btn">save book</ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list class="content__items">
+    <ion-item>
+      <ion-label>ISBN</ion-label>
+      <ion-input class="bookInfo" [(ngModel)]="task"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Book</ion-label>
+      <ion-input class="bookInfo"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Author</ion-label>
+      <ion-input class="bookInfo"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Publisher</ion-label>
+      <ion-input class="bookInfo"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Year</ion-label>
+      <ion-input class="bookInfo"></ion-input>
+    </ion-item>
+  </ion-list>
+</ion-content>
